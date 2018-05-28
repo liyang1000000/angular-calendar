@@ -1,0 +1,25 @@
+<div class="calendar-container">
+	<div class="calendar-header">
+		<div><button (click)="prevYear()"><<</button></div>
+		<div><button (click)="prevMonth()"><</button></div>
+		<div class="month-year">
+			<div class="month">{{months[month]}}</div>
+			<div class="year">{{year}}</div>
+		</div>
+		<div><button (click)="nextMonth()">></button></div>
+		<div><button (click)="nextYear()">>></button></div>
+	</div>
+	<div class="calendar-days-th">
+		<div class="cell">Sun</div>
+		<div class="cell">Mon</div>
+		<div class="cell">Tue</div>
+		<div class="cell">Wed</div>
+		<div class="cell">Thur</div>
+		<div class="cell">Fri</div>
+		<div class="cell">Sat</div>
+	</div>
+	<div class="calendar-dates-container">
+		<div class="cell" *ngFor="let empty of emptyDates"></div>
+		<div class="cell" *ngFor="let monthDay of monthDays">{{monthDay}}</div>
+	</div>
+</div>
